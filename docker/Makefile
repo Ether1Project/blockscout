@@ -394,7 +394,7 @@ ifdef COIN_BALANCE_ON_DEMAND_FETCHER_THRESHOLD_MINUTES
 endif
 
 HAS_BLOCKSCOUT_IMAGE := $(shell docker images | grep -sw "${BS_CONTAINER_IMAGE} ")
-build: 
+build:
 	@echo "==> Checking for blockscout image $(BS_CONTAINER_IMAGE)"
 ifdef HAS_BLOCKSCOUT_IMAGE
 	@echo "==> Image exist. Using $(BS_CONTAINER_IMAGE)"
@@ -443,7 +443,7 @@ else
 endif
 endif
 
-start: build postgres 
+start: build postgres
 	@echo "==> Starting blockscout"
 	@docker run --rm --name $(BS_CONTAINER_NAME) \
 					$(BLOCKSCOUT_CONTAINER_PARAMS) \
