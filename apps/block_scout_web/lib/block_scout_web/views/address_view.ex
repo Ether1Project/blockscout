@@ -6,6 +6,7 @@ defmodule BlockScoutWeb.AddressView do
   alias BlockScoutWeb.{AccessHelpers, LayoutView}
   alias Explorer.{Chain, CustomContractsHelpers}
   alias Explorer.Chain.{Address, Hash, InternalTransaction, SmartContract, Token, TokenTransfer, Transaction, Wei}
+  alias Explorer.Chain.Cache.AddressSum
   alias Explorer.Chain.Block.Reward
   alias Explorer.ExchangeRates.Token, as: TokenExchangeRate
   alias Explorer.SmartContract.{Helper, Writer}
@@ -152,7 +153,7 @@ defmodule BlockScoutWeb.AddressView do
   end
 
   def balance_percentage(%Address{fetched_coin_balance: _} = address) do
-    balance_percentage(address, Chain.total_supply())
+    balance_percentage(address, AddressSum.get_sum())
   end
 
   def balance_block_number(%Address{fetched_coin_balance_block_number: nil}), do: ""
