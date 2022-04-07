@@ -6,8 +6,8 @@ defmodule BlockScoutWeb.AddressView do
   alias BlockScoutWeb.{AccessHelpers, LayoutView}
   alias Explorer.{Chain, CustomContractsHelpers}
   alias Explorer.Chain.{Address, Hash, InternalTransaction, SmartContract, Token, TokenTransfer, Transaction, Wei}
-  alias Explorer.Chain.Cache.AddressSum
   alias Explorer.Chain.Block.Reward
+  alias Explorer.Chain.Cache.AddressSum
   alias Explorer.ExchangeRates.Token, as: TokenExchangeRate
   alias Explorer.SmartContract.{Helper, Writer}
 
