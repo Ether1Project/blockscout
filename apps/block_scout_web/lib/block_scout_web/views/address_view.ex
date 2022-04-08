@@ -136,7 +136,7 @@ defmodule BlockScoutWeb.AddressView do
     if Decimal.cmp(total_supply, 0) == :gt do
       balance
       |> Wei.to(:ether)
-      |> Decimal.div(Decimal.new(total_supply))
+      |> Decimal.div(Decimal.new(AddressSum.get_sum()))
       |> Decimal.mult(100)
       |> Decimal.round(4)
       |> Decimal.to_string(:normal)
