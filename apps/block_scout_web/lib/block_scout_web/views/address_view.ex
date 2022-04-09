@@ -7,7 +7,6 @@ defmodule BlockScoutWeb.AddressView do
   alias Explorer.{Chain, CustomContractsHelpers}
   alias Explorer.Chain.{Address, Hash, InternalTransaction, SmartContract, Token, TokenTransfer, Transaction, Wei}
   alias Explorer.Chain.Block.Reward
-  alias Explorer.Chain.Cache.AddressSum
   alias Explorer.ExchangeRates.Token, as: TokenExchangeRate
   alias Explorer.SmartContract.{Helper, Writer}
 
@@ -136,7 +135,7 @@ defmodule BlockScoutWeb.AddressView do
     if Decimal.cmp(total_supply, 0) == :gt do
       balance
       |> Wei.to(:ether)
-      |> Decimal.div(Decimal.new(AddressSum.get_sum()))
+      |> Decimal.div(Decimal.new(total_supply))
       |> Decimal.mult(100)
       |> Decimal.round(4)
       |> Decimal.to_string(:normal)
@@ -153,7 +152,7 @@ defmodule BlockScoutWeb.AddressView do
   end
 
   def balance_percentage(%Address{fetched_coin_balance: _} = address) do
-    balance_percentage(address, AddressSum.get_sum())
+    balance_percentage(address, Chain.total_supply())
   end
 
   def balance_block_number(%Address{fetched_coin_balance_block_number: nil}), do: ""
