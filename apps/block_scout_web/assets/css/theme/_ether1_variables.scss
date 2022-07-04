@@ -2,13 +2,19 @@
 $primary: #840032;
 $secondary: #343434;
 $tertiary: #7f7f7f;
-$additional-font: #ff95db;
+$additional-font: #fffbfe;
+
+//main
+main {
+	background-image: url(https://steam.tools/img/simple.png);
+}
 
 // footer
 $footer-background-color: $primary;
 $footer-title-color: #fff;
 $footer-text-color: #fff;
 $footer-item-disc-color: $secondary;
+$footer-logo-height:64px !default;
 
 // dashboard
 $dashboard-line-color-price: $tertiary; // price left border
@@ -23,14 +29,18 @@ $dashboard-banner-gradient-start: $primary; // gradient begin
 
 $dashboard-banner-gradient-end: lighten($primary, 5); // gradient end
 
-$dashboard-banner-network-plain-container-background-color: #4b021e; // stats bg
+$dashboard-banner-network-plain-container-background-color: #95043c; // stats bg
 
+$dashboard-banner-chart-legend-label-color: #000000;
 
 // navigation
-.navbar { box-shadow: 0px 0px 30px 0px rgba(75, 2, 30, 0.12); } // header shadow
+//.navbar { box-shadow: 0px 0px 30px 0px rgba(75, 2, 30, 0.12); } // header shadow
+.navbar { box-shadow: 0px 0px 30px 0px rgb(80 80 80); } // header shadow
+$navbar-logo-height: 64px !default;
 $header-icon-border-color-hover: $tertiary; // top border on hover
 $header-icon-color-hover: $tertiary; // nav icon on hover
 .dropdown-item:hover, .dropdown-item:focus { background-color: $tertiary !important; } // dropdown item on hover
+
 
 // buttons
 $btn-line-bg: #fff; // button bg
@@ -43,7 +53,14 @@ $btn-contract-color: #4b021e;
 .tile-type-block {
     border-left: 4px solid #4b021e;
 } // tab active bg
+.tile-transaction-type-block {
+  background-color: rgb(0 0 0 / 8%);
+}
 
 // card
 $card-background-1: $tertiary;
 $card-tab-active: $tertiary;
+
+
+
+
