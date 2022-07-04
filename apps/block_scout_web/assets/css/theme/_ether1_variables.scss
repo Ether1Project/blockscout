@@ -23,15 +23,20 @@ $dashboard-banner-chart-legend-value-color: $additional-font; // chart labels
 
 $dashboard-stats-item-value-color: $additional-font; // stat values
 
-$dashboard-stats-item-border-color: $secondary; // stat border
+//$dashboard-stats-item-border-color: $secondary; // stat border
+$dashboard-stats-item-border-color: #840032 !default;
 
-$dashboard-banner-gradient-start: $primary; // gradient begin
+//$dashboard-banner-gradient-start: $primary; // gradient begin
+$dashboard-banner-gradient-start: #840032 !default;
 
 $dashboard-banner-gradient-end: lighten($primary, 5); // gradient end
 
 $dashboard-banner-network-plain-container-background-color: #95043c; // stats bg
 
 $dashboard-banner-chart-legend-label-color: #000000;
+
+
+
 
 // navigation
 //.navbar { box-shadow: 0px 0px 30px 0px rgba(75, 2, 30, 0.12); } // header shadow
