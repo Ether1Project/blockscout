@@ -1,8 +1,8 @@
-$dashboard-banner-gradient-start: $primary !default;
+$dashboard-banner-gradient-start: $primary;
 $dashboard-banner-gradient-end: lighten(
   $dashboard-banner-gradient-start,
   5%
-) !default;
+);
 $dashboard-banner-network-plain-container-background-color: lighten($dashboard-banner-gradient-end, 5%) !default;
 $dashboard-line-color-price: lighten($dashboard-banner-gradient-end, 5%) !default;
 $dashboard-line-color-price-dark-theme: lighten($dashboard-banner-gradient-end, 5%) !default;
