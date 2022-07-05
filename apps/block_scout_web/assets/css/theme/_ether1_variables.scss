@@ -24,10 +24,10 @@ $dashboard-banner-chart-legend-value-color: $additional-font; // chart labels
 $dashboard-stats-item-value-color: $additional-font; // stat values
 
 //$dashboard-stats-item-border-color: $secondary; // stat border
-$dashboard-stats-item-border-color: #840032 !default;
+$dashboard-stats-item-border-color: #840032 !important;
 
 //$dashboard-banner-gradient-start: $primary; // gradient begin
-$dashboard-banner-gradient-start: #840032 !default;
+$dashboard-banner-gradient-start: #840032 !important;
 
 $dashboard-banner-gradient-end: lighten($primary, 5); // gradient end
 
