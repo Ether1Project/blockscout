@@ -29,13 +29,15 @@ $dashboard-stats-item-border-color: #840032 !important;
 //$dashboard-banner-gradient-start: $primary; // gradient begin
 $dashboard-banner-gradient-start: #840032 !important;
 
-$dashboard-banner-gradient-end: lighten($primary, 5); // gradient end
+$dashboard-banner-gradient-end: lighten($primary, 5) !important; // gradient end
 
 $dashboard-banner-network-plain-container-background-color: #95043c; // stats bg
 
 $dashboard-banner-chart-legend-label-color: #000000;
 
-
+.dashboard-banner-container {
+	background-image: linear-gradient(90deg,#840032,#9e003c) !important;
+}
 
 
 // navigation
