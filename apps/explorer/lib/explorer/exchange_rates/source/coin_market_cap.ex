@@ -103,7 +103,7 @@ defmodule Explorer.ExchangeRates.Source.CoinMarketCap do
   end
 
   defp get_circulating_supply(token_properties) do
-    token_properties && token_properties["circulating_supply"]
+    token_properties && token_properties["total_supply"]
   end
 
   defp get_total_supply(token_properties) do
@@ -113,7 +113,7 @@ defmodule Explorer.ExchangeRates.Source.CoinMarketCap do
   defp get_market_cap_data_usd(token_properties) do
     token_properties && token_properties["quote"] &&
       token_properties["quote"]["USD"] &&
-      token_properties["quote"]["USD"]["market_cap"]
+      token_properties["quote"]["USD"]["fully_diluted_market_cap"]
   end
 
   defp get_total_volume_data_usd(token_properties) do
